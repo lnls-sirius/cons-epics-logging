@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  logging:
+    image: lnlscon/epics-r3.15.6:logging
+    build: 
+      dockerfile: 'Dockerfile'
+      context: .
+      labels:
+          - "br.com.lnls-sirius.description=EPICS 3.15.6 Logging"
+          - "br.com.lnls-sirius.department=CONS"
+          - "br.com.lnls-sirius.maintener=Claudio Ferreira Carneiro"
+    ports: 
+      - "7011:7011"
+    environment:
+      - "EPICS_IOC_LOG_FILE_NAME=/var/log/epics/caput.log"
+      - "EPICS_IOC_LOG_FILE_LIMIT=0"
+      - "EPICS_IOC_LOG_INET=0.0.0.0"
+      - "EPICS_IOC_LOG_PORT=7011"
+
