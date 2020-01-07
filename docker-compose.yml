@@ -12,7 +12,7 @@ services:
     ports: 
       - "7011:7011"
     environment:
-      - "EPICS_IOC_LOG_FILE_NAME=/var/log/epics/caput.log"
+      - "EPICS_IOC_LOG_FILE_NAME=/var/log/epics/log"
       - "EPICS_IOC_LOG_FILE_LIMIT=0"
       - "EPICS_IOC_LOG_INET=0.0.0.0"
       - "EPICS_IOC_LOG_PORT=7011"

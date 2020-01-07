@@ -42,7 +42,7 @@ RUN wget -O /opt/epics-R3.15.6/base-3.15.6.tar.gz ${CONS_REPO}/EPICS/base-3.15.6
     mv base-3.15.6 base && cd base && make -j 32
 
 # Default IOC log configuration
-ENV EPICS_IOC_LOG_FILE_NAME /var/log/epics/epics.log
+ENV EPICS_IOC_LOG_FILE_NAME /var/log/epics/log
 ENV EPICS_IOC_LOG_FILE_LIMIT 0
 ENV EPICS_IOC_LOG_INET 0.0.0.0
 ENV EPICS_IOC_LOG_PORT 7011
