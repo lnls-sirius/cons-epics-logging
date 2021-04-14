@@ -1,12 +1,12 @@
 
-/var/log/epics/log {
+${EPICS_IOC_LOG_FILE_NAME} {
     create 0640 root root
     dateext
     missingok
     nomail
     noolddir
     notifempty
-    rotate 3
-    size 500M
-    weekly
+    rotate 15
+    size 50M
+    daily
 }
